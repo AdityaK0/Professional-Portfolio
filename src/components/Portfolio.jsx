@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Smartphone, Server, Cloud, Package, GitBranch, ChevronLeft, ChevronRight, Menu, X, Download, Send, MapPin } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Portfolio() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -193,13 +194,34 @@ export default function Portfolio() {
     { name: "Git", icon: <GitBranch className="w-6 h-6" />, color: "from-gray-600 to-gray-800" }
   ];
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Handle form submission (integrate with Formspree/EmailJS)
+  //   console.log('Form submitted:', formData);
+
+  //   alert('Thank you! I will get back to you soon.');
+  //   setFormData({ name: '', email: '', message: '' });
+  // };
+
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission (integrate with Formspree/EmailJS)
-    console.log('Form submitted:', formData);
-    alert('Thank you! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
+  e.preventDefault();
+
+  const subject = encodeURIComponent(`Message from ${formData.name}`);
+  const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+
+  // Replace with your own email address
+  const recipient = "aditya123905@gmail.com";
+
+  // Gmail compose link
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+
+  // Open Gmail compose in new tab
+  window.open(gmailUrl, "_blank");
+
+  // Reset form after redirect
+  setFormData({ name: "", email: "", message: "" });
+ };
+
 
   const nextTestimonial = () => {
     setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -274,23 +296,60 @@ export default function Portfolio() {
             <a href="#contact" className="group relative bg-gradient-to-r from-emerald-500 to-cyan-600 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 hover:scale-105">
               <span className="relative z-10">Hire Me</span>
             </a>
-            <a href="/resume.pdf" className="group border-2 border-slate-700 hover:border-emerald-500 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-emerald-500/10 flex items-center gap-2 justify-center">
-              <Download className="w-5 h-5" />
-              View Resume
+
+            <a href="#projects" className="group border-2 border-slate-700 hover:border-emerald-500 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-emerald-500/10 flex items-center gap-2 justify-center">
+
+              <Code2 className="w-5 h-5" />
+              View Craft
             </a>
+
+
+            
+
           </div>
           
-          <div className="flex justify-center gap-8 opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+          {/* <div className="flex justify-center gap-8 opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400 transition-all duration-300 hover:scale-110">
               <Github className="w-7 h-7" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110">
               <Linkedin className="w-7 h-7" />
             </a>
-            <a href="mailto:aditya@example.com" className="text-slate-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">
+
+
+
+            <a href="mailto:aditya123905@gmail.com" className="text-slate-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">
               <Mail className="w-7 h-7" />
             </a>
+
+            <a
+                href="https://wa.me/919876543210"  // ← replace with your number (include country code, no +)
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-green-500 transition-all duration-300 hover:scale-110"
+              >
+                <FaWhatsapp className="w-7 h-7" />
+              </a>
+          </div> */}
+
+          <div className="flex justify-center items-center gap-8 opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+            <a
+              href="mailto:aditya123905@gmail.com"
+              className="flex items-center justify-center text-slate-400 hover:text-purple-400 transition-all duration-300 hover:scale-110"
+            >
+              <Mail className="w-8 h-8" />
+            </a>
+
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center text-slate-400 hover:text-green-500 transition-all duration-300 hover:scale-110"
+            >
+              <FaWhatsapp className="w-8 h-8" />
+            </a>
           </div>
+
         </div>
       </section>
 
@@ -377,14 +436,14 @@ export default function Portfolio() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                   
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-slate-950/90 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
+                  {/* <div className="absolute inset-0 bg-slate-950/90 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
                     <a href={project.demo} className="bg-emerald-500 hover:bg-emerald-600 p-3 rounded-lg transition-all duration-300 hover:scale-110">
                       <ExternalLink className="w-5 h-5" />
                     </a>
                     <a href={project.github} className="bg-slate-700 hover:bg-slate-600 p-3 rounded-lg transition-all duration-300 hover:scale-110">
                       <Github className="w-5 h-5" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="p-6">
@@ -532,7 +591,7 @@ export default function Portfolio() {
             </form>
 
             <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-              <a 
+              {/* <a 
                 href="https://github.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -549,7 +608,28 @@ export default function Portfolio() {
               >
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
+              </a> */}
+
+              <a
+                href="mailto:aditya123905@gmail.com"  // ← replace with your email
+                className="flex items-center justify-center gap-2 bg-slate-800  px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+              >
+                <Mail className="w-5 h-5 text-red-400" />
+                Gmail
               </a>
+
+              <a 
+                href="https://wa.me/919327748938"   // ← replace with your phone number, include country code (no +)
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+              >
+                <FaWhatsapp className="w-5 h-5 text-green-500" />
+                WhatsApp
+              </a>
+
+{/* 
+
               <a 
                 href="https://upwork.com" 
                 target="_blank" 
@@ -558,7 +638,10 @@ export default function Portfolio() {
               >
                 <ExternalLink className="w-5 h-5" />
                 Upwork
-              </a>
+              </a> */}
+
+
+
             </div>
           </div>
         </div>
@@ -569,7 +652,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-slate-400 text-center md:text-left">
-              <p>© 2025 Aditya Chaudhary — Built with React & TailwindCSS</p>
+              <p>© 2025 Aditya Chaudhary</p>
             </div>
             <div className="flex items-center gap-2 text-slate-400">
               <MapPin className="w-4 h-4" />
