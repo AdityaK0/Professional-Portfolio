@@ -238,7 +238,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-              AC
+              <img src="/favicon.svg" alt=""  className='h-12 w-12'/>                      
             </div>
             
             {/* Desktop Menu */}
@@ -287,9 +287,14 @@ export default function Portfolio() {
               Aditya Chaudhary
             </span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            I build web & mobile experiences using <span className="text-emerald-400 font-semibold">Django</span>, <span className="text-cyan-400 font-semibold">DRF</span>, <span className="text-blue-400 font-semibold">React</span> & <span className="text-purple-400 font-semibold">React Native</span>.
+
+          <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed">
+            I build <span className="text-emerald-400 font-semibold">web</span> and <span className="text-cyan-400 font-semibold">mobile apps </span> 
+            that <span className="text-blue-400 font-semibold">solve problems</span> and 
+            <span className="text-purple-400 font-semibold"> grow businesses</span>.
+          </p>
+          <p>
+            <br />
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
@@ -392,7 +397,7 @@ export default function Portfolio() {
                 <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl border border-slate-700/50">
                   <div className="aspect-square bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-2xl flex items-center justify-center">
                     <div className="text-9xl font-bold bg-gradient-to-br from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-                      AC
+                      <img src="/favicon.svg" alt=""  className='h-40 w-40'/>                      
                     </div>
                   </div>
                   <div className="mt-6 text-center">

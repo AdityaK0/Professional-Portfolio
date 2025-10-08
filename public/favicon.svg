@@ -1,0 +1,6 @@
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square from your Frappe SVG -->
+  <path d="M19.9624 0.763672H5.83963C3.31294 0.763672 1.26465 2.81189 1.26465 5.33849V19.4608C1.26465 21.9874 3.31294 24.0356 5.83963 24.0356H19.9624C22.4891 24.0356 24.5374 21.9874 24.5374 19.4608V5.33849C24.5374 2.81189 22.4891 0.763672 19.9624 0.763672Z" fill="#383838"/>
+  <!-- Revised "A" path: bolder, Frappe-inspired -->
+  <path d="M8 19L12.5 7L17 19H14.5L13 15H12L10.5 19H8ZM11.5 14H13.5L12.5 11.5L11.5 14Z" fill="white"/>
+</svg>
