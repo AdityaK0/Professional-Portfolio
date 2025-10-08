@@ -293,9 +293,17 @@ export default function Portfolio() {
             that <span className="text-blue-400 font-semibold">solve problems</span> and 
             <span className="text-purple-400 font-semibold"> grow businesses</span>.
           </p>
+
+
+          <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed">
+          <span className="text-blue-400 font-semibold">Your vision </span> our 
+            <span className="text-purple-400 font-semibold"> creation</span>. 
+          </p>
+
           <p>
             <br />
           </p>
+
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
             <a href="#contact" className="group relative bg-gradient-to-r from-emerald-500 to-cyan-600 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 hover:scale-105">
