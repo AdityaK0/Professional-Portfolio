@@ -376,7 +376,7 @@ export default function Portfolio() {
               </h2>
               <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
                 <p>
-                  Hi! I'm <span className="text-white font-semibold">Aditya Chaudhary</span>, a passionate <span className="text-emerald-400">BCA graduate</span> and <span className="text-cyan-400">freelance developer</span> specializing in building scalable web and mobile applications.
+                  Hi! I'm <span className="text-white font-semibold">Aditya Chaudhary</span>, a passionate <span className="text-cyan-400"> developer</span> specializing in building scalable web and mobile applications.
                 </p>
                 <p>
                   With expertise in <span className="text-white font-medium">Django, DRF, React, and React Native</span>, I've delivered 12+ successful projects ranging from telemedicine platforms to e-commerce solutions, serving thousands of users worldwide.
